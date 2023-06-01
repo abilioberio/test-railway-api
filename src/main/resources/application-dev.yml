@@ -5,9 +5,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:postgresql://${DB_HOST:containers-us-west-138.railway.app}:${DB_PORT:6422}/${DB_NAME:railway}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:DQJbG2zTagEnb9KoDkQV}
     name: test-railway-api
 
   jpa:
