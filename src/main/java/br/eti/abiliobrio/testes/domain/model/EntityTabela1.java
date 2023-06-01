@@ -30,4 +30,9 @@ public class EntityTabela1 implements Serializable {
 	
 	private String name;
 
+	@Override
+	public String toString() {
+		return "EntityTabela1 [id=" + id + ", name=" + name + "]";
+	}
+	
 }

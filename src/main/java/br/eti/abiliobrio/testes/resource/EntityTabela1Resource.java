@@ -21,11 +21,19 @@ public class EntityTabela1Resource {
 	
 	@PostMapping("/incluir")
 	public EntityTabela1 incluir(@RequestBody EntityTabela1 tabela1) {
-		return entityTabela1Service.incluir(tabela1);
+		
+		EntityTabela1 tabela = entityTabela1Service.incluir(tabela1);
+		System.out.println(tabela.toString());
+		
+		return tabela;
 	}
 	
 	@GetMapping("/listar")
 	public List<EntityTabela1> listar(){
-		return entityTabela1Service.listar();
+		
+		List<EntityTabela1> lista = entityTabela1Service.listar();
+		System.out.println(lista);
+		
+		return lista;
 	}
 }
