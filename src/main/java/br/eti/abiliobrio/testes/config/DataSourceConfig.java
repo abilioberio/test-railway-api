@@ -11,15 +11,17 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 	
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setUrl("jdbc:postgresql://containers-us-west-138.railway.app:6422/railway");
-		dataSource.setUsername("postgres");
-		dataSource.setPassword("DQJbG2zTagEnb9KoDkQV");
+		
+		dataSource.setUrl(System.getenv("url"));
+		dataSource.setUsername(System.getenv("username"));
+		dataSource.setPassword(System.getenv("password"));		
+		
 		dataSource.setDriverClassName("org.postgresql.Driver");
 		return dataSource;
 	}

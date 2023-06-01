@@ -14,9 +14,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import jakarta.persistence.EntityManagerFactory;
 
-@Configuration
-@Component
-@EnableTransactionManagement
+//@Configuration
+//@Component
+//@EnableTransactionManagement
 public class JPAConfig {
 
 	@Bean

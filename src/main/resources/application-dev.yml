@@ -1,0 +1,17 @@
+server:
+  servlet:
+    contextPath: /test-api
+  port: ${PORT:3000}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/railway-ds
+    username: postgres
+    password: abiliobrio#
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+      
+      
